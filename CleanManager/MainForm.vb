@@ -26,9 +26,7 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Visible = False
 
-        If GitHubUpdater.Check Then
-            GitHubUpdater.Download()
-        End If
+        If GitHubUpdater.Check Then GitHubUpdater.Download()
 
         ProgressDialog.ProgressBar.Value = 0
         ProgressDialog.ProgressBar.Maximum = 961
